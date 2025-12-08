@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background1-text-color-1--: #707351;
+    --text-color2-: #ffff;
+    --list-background--: #faf9f4;
+    --border--: #6f744d;
+}
+
+header{
+    background-color: var(--background1-text-color1-);
+    background-image: url(../images/background_tradeoffers.png);
+    font-family: "Kedebideri", sans-serif;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+h1, h2{
+    margin-left: 40px;
+    font-size: 100px;
+    font-weight: 450;
+    color: var(--text-color2-);
+    line-height: 0.90;
+    
+}
+
+h2{
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+header h3{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-color2-);
+}
+
+
+header img{
+    height: 120%;
+    max-width: 100%;
+}
+
+
+.grid-container-to
+{
+    display: grid;
+    grid-auto-columns: 30%;
+    margin: 30px;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5em;
+    grid-template-areas:
+    "text list list"
+    "image-trade list list"
+    "image-trade list list";
+}
+
+.tradeOfferList{
+    margin-left: 20px;
+    width: 100%;
+    min-height: 700px;
+    border-style: solid;
+    border-color: var(--border--);
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: var(--list-background--);
+}
+
+footer{
+    background-color: var(--background1-text-color-1--);
+}
+
+
+@media (max-width: 768px){
+    header{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .grid-container-to {
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+            "image-trade text"
+            "list list";
+    }
+
+    header img{
+    height: 150px;
+    min-width: 100%;
+    object-fit: cover;       /* crop, don’t stretch */
+    object-position: center; /* keep nice center crop */
+    border-radius: 10px;
+}
+
+.tradeOfferList{
+    margin: 0px;
+    margin-top: 10px;
+}
+    
+}
+
+@media (max-width: 425px){
+    header{
+        padding-bottom: 5px;
+    }
+    .title{
+        text-size-adjust: 50%;
+    }
+
+    h1{
+        margin-left: 20px;
+    }
+
+    h2{
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+
+    header h3{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px){
+    .title{
+        text-size-adjust: 40%;
+    }
+}
+

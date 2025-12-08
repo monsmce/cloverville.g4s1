@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --navbar-base--: rgba(0, 0, 0, 0.4);
+    --navbar-center-text: #ffe8c6;
+    --navbar-right-text: #ffff;
+    --footer-text: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+aside{
+    position: fixed;/*makes it stay*/
+    top: 0; /*puts it on the top*/
+    width: 100%; /*full width of the page*/
+    z-index: 1000;/*z index comtrols the frist layers, its a bigg number to make sure it stays on top*/
+    background-color: var(--navbar-base--);
+}
+
+.topnav
+{
+    display: grid;
+    align-items: center;
+    gap: 1em;
+    grid-template-areas:
+    "box-1 box-2 box-2 box-3";
+}
+
+nav .box {
+    text-align: center;
+}
+
+nav .box img{
+    height: 3.5rem;
+    width: auto;
+}
+nav a {
+    padding: 20px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+#middle-nav a{
+    color: var(--navbar-center-text);
+    font-weight: 450;
+}
+
+#right-nav a{
+    color: var(--navbar-right-text);
+}
+
+#middle-nav a:hover, 
+#right-nav a:hover{ /*so no effect on image*/
+    text-decoration: underline;
+    background-color: var(--navbar-base--);
+}
+
+
+
+.topnav .icon {
+    display: none;
+}
+
+
+/*footer*/
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+
+}
+footer a{
+    margin: 20px;
+    text-decoration: none;
+    color: var(--footer-text--);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px){
+    .topnav{
+        text-size-adjust: 80%;
+    }
+
+    nav a {
+    padding: 10px;
+    }
+
+    nav .box img {
+    height: 2.9rem;
+}
+    footer{
+        text-size-adjust: 80%;
+    }
+}
+
+
+
+
+/* PHONE VIEW (max 600px) */
+@media screen and (max-width: 600px) {
+
+
+    /* Hide all nav boxes except the logo */
+    .topnav .box:not(:first-child) {
+        display: none;
+    }
+
+    /* Show burger icon */
+    .topnav a.icon {
+        display: block;
+        margin-left: auto;
+        padding-right: 30px;
+        font-size: 22px;
+        color: white;
+    }
+
+    .topnav
+    { display: grid;
+        grid-template-areas:
+        "box-1 box3";
+    }
+
+    #imagelogo{
+        justify-self: start;
+    }
+
+    /* When activated */
+    .topnav.responsive {
+        display: block;
+    }
+
+    /* Stack items vertically */
+    .topnav.responsive .box {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+
+    /* Show all boxes again */
+    .topnav.responsive .box:not(:first-child) {
+        display: block;
+    }
+
+    /* Move icon top-right */
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 10px;
+        top: 1px;
+    }
+
+    .topnav.topnav.responsive
+    {
+        display: grid;
+        gap: 0;
+        grid-template-areas:
+        "box-1"
+        "box-3" 
+        "box-2";
+    }
+
+    .topnav.responsive #middle-nav, .topnav.responsive #right-nav {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 0rem;
+    margin: 0;
+    justify-content: center;
+    justify-items: center;
+}
+    .topnav.responsive #middle-nav{
+        margin-bottom: 20px;
+    }
+
+    footer{
+        text-size-adjust: 50%;
+        padding: 5px;
+    }
+}

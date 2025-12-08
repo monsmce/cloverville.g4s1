@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* INDEX*/
+:root{
+    --background1-textncolor1-: #707351;
+    --text-color-2--: #ffe8c6;
+    --background2-text-color-3--: #ffff;
+    --text-color-3--: black;
+}
+
+header{
+    background-color: var(--background1-textncolor1-);
+    background-image: url(../images/background_indexheader.gif);
+    background-size: cover;
+    background-position: top;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    
+}
+
+.header-container {
+    margin-left: 50px;
+}
+
+
+.header-title h1{
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    font-size: 180px;
+    color: var(--text-color-2--);
+}
+.header-title h2{
+    font-family: "Kedebideri", sans-serif;
+    font-weight: 450;
+    font-size: 30px;
+    color: var(--background2-text-color-3--);
+    
+}
+
+.header-button{
+    margin-top: 200px;
+}
+.cta-button{
+    text-decoration: none;
+    background-color: var(--text-color-2--);
+    padding: 20px;
+    color: var(--background2-text-color-4--);
+    font-family: "Antonio", sans-serif;
+    border-radius: .5em;
+}
+/*about us section*/
+
+.header-button a:hover{
+    text-decoration: underline;
+    
+}
+section{
+    background-color: var(--background2-textncolor3-);
+    background-image: url(../images/background_indexsection.png);
+    background-size: cover;
+    background-position:left;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin: 10px;
+}
+
+.section-box img{
+    width: 550px;
+    
+}
+
+.section-box {
+    font-family: "Kedebideri", sans-serif;
+    color: var(--background1-textncolor1-);
+}
+
+.section-box h1{
+    font-size: 106px;
+    font-weight: 600;
+    line-height: 0.82;
+
+}
+
+.section-box h2{
+    font-size: 56px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#title-section{
+    align-self: center;
+}
+
+.section-box p{
+    margin: 20px;
+    text-align: center;
+    color: var(--text-color-3--);
+    font-size: 20px;
+}
+
+.village-container{
+    margin: 30px;
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+    "image title"
+    "text-box text-box";
+}
+
+
+@media (max-width: 768px){
+    .header-container{
+        text-size-adjust: 80%;
+    }
+    .village-container{
+    justify-items: center;
+    grid-template-areas:
+    "title"
+    "text-box"
+    "image";
+}
+    header{
+        padding-bottom: 60px;
+        padding-top: 40px;
+    }
+
+    .header-button {
+    margin-top: 130px;
+}
+
+}
+
+
+@media (max-width: 425px){
+    
+    header{
+        padding-top: 50px;
+    }
+
+    .header-container{
+        text-size-adjust: 40%;
+    }
+
+    .header-button{
+        margin-top: 80px;     /* reduce huge gap */
+    }
+
+    .cta-button{
+        padding: 10px;
+        font-size: 23px;
+    }
+
+
+    /* SECTION -------------------------- */
+
+    .village-container{
+        text-size-adjust: 60%;
+    }
+
+    .section-box img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    section{
+        padding: 0px;
+    }
+
+
+
+}
+
+
+@media (max-width: 375px){
+    .header-title h1{
+        font-size: 170px;
+    }
+    
+    .header-container{
+        margin-left: 20px;
+    }
+}

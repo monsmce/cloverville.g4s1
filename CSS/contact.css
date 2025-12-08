@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+    --text1-background1--: #6f744d;
+    --background2--: #d5ba8f;
+    --text-a--: #ffe8c6;
+    --text-h4--: #faf9f4;
+    --border-text--: #ffff;
+
+}
+
+body{
+    background-image: url(../images/background_contact.png);
+    object-position: bottom;
+    font-family: "Kedebideri", sans-serif;
+}
+header{
+    margin: 80px 20px 10px;
+}
+
+h1{
+    font-size: 120px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: var(--text1-background1--)
+}
+
+.grid-container-base
+{
+    display: grid;
+    margin: 30px;
+    align-items: start;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "box1 box2 box2";
+}
+
+#cloverville-box{
+    padding: 0px 15px 6px;
+    background-color: var(--text1-background1--);
+}
+
+#cloverville-logo{
+    width: 100%;
+}
+
+.text-box1 {
+    padding-left: 60px;
+}
+
+.text-box1 h4{
+    margin-top: 30px;
+    margin-bottom: 18px;
+    margin-right: 40px;
+    font-size: 16px;
+    color: var(--text-h4--);
+    font-weight: 650;
+}
+
+.text-box1 p{
+    margin-inline-start: 30px;
+}
+
+.text-box1 a{
+    color: var(--text-a--);
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+#image-contact-c{
+    margin-top: 4rem;
+    padding: 20px;
+    height: auto; 
+    width: 100%; 
+}
+
+#programmers-box {
+    color: var(--border-text--);
+    display: grid;
+    width: auto;
+    padding: 2em;
+    background-color: var(--background2--);
+}
+
+#cloverville-box,
+#programmers-box {
+    height: 100%;
+}
+
+/* HEADER */
+.header-row {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 54px;
+    line-height: 0.8;
+}
+
+.title h2{
+    font-weight: 400;
+}
+
+#title-2nd-line{
+    margin-left: 70px;
+}
+
+.softprg-logo {
+    width: 180px;
+    margin-top: -25px;
+    margin-left: -150px;
+}
+
+/* TEXT DESCRIPTION */
+.description {
+    margin: 30px 20px 40px;
+    justify-self: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto 20px;
+    row-gap: 35px;
+    column-gap: 10px;
+}
+
+.info-card {
+    text-align: center;
+}
+
+
+.circle {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;          /* makes the image clip to circle */
+    border: 3px solid var(--border-text--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* fills the circle nicely */
+}
+
+.name {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.id {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--border-text--);
+}
+
+
+
+@media (max-width: 1024px) {
+
+    #porgrammers-box{
+        margin: 0;
+    }
+
+    .title {
+        font-size: 50px;
+        line-height: 0.9;
+    }
+
+    #title-2nd-line {
+        margin-left: 40px;
+    }
+
+    .softprg-logo {
+        margin-left: -300px;
+        
+    }
+
+    /* Description under title */
+    .description {
+        padding: 10px;
+    }
+    
+    .grid {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Cloverville box */
+    #cloverville-box {
+        text-size-adjust: 80%;
+    
+    }
+
+    .text-box1 {
+        padding-left: 20px;
+        margin-top: -20px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .softprg-logo {
+        width: 130px;
+    }   
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .name {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .id {
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    header{
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 70px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* -- GRID BASE CON 1 COLUMNA -- */
+    .grid-container-base {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "box1"
+        "box2";
+        margin: 20px;
+        gap: 1.5em;
+    }
+
+    #cloverville-box {
+        padding: 10px;
+    }
+
+    #cloverville-logo {
+        width: 80%;
+        display: block;
+    }
+
+    .text-box1 {
+        padding-left: 60px;
+        margin-top: -15px;
+    }
+
+    .text-box1 h4 {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .text-box1 p {
+        font-size: 13px;
+        margin-inline-start: 10px;
+    }
+
+    .text-box1 a {
+        font-size: 13px;
+    }
+
+    #image-contact-c {
+        padding: 20px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* PROGRAMMERS BOX */
+    #programmers-box {
+        padding: 1.5em;
+    }
+
+    /* HEADER DE PROGRAMADORES */
+    .title {
+        font-size: 26px;
+    }
+
+    .softprg-logo {
+        width: 120px;
+        margin-left: -110px;
+        margin-top: -15px;
+    }
+
+    /* DESCRIPCIÓN */
+    .description {
+        margin: 20px 5px;
+        font-size: 13px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .id {
+        font-size: 13px;
+    }
+    
+
+    .grid-container-base{
+        margin: 0;
+    }
+
+}
+
+

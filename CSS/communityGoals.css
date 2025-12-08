@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --text-color-1--: #d5ba8f;
+    --text-color2-: #6f744d;
+}
+header{
+    margin-right: 4.5em;
+    margin-bottom: 1.5em;
+}
+.cg-grid-container{
+    display: grid;
+    grid-template-areas:
+    "title-area threshold-area"
+    "description description";
+}
+
+#title img{
+    max-width: 100%;
+    height: 120px;
+    height: auto;
+}
+
+#threshold-area{
+    place-self: center;
+    font-family: "Poppins";
+    text-align: center;
+}
+h1{
+    color: var(--text-color-1--);
+    font-size: 89px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 26.8px;
+    font-weight: 400;
+}
+
+#description{
+    font-family: "Kedebideri", sans-serif;
+    margin-left: 50px;
+}
+
+h3{
+    color: var(--text-color2-);
+    font-size: 54px;
+    font-weight: 250;
+}
+
+@media (max-width: 768px){
+
+    #threshold-area{
+        text-size-adjust: 80%;
+    }
+    #description{
+        text-size-adjust: 80%;
+    }
+}
+
+@media (max-width: 425px){
+    .cg-grid-container{
+        grid-template-areas:
+        "title-area"
+        "description"
+        "threshold-area";
+    }
+
+    #title img{
+    max-width: 120%;
+    height: auto;
+}
+    #threshold-area{
+        text-size-adjust: 70%;
+    }
+
+    #description h3 {
+    display: inline; /* Makes the h3s flow in one line */
+    margin: 0;       /* Remove default h3 margin */
+}
+
+    #description{
+        text-size-adjust: 65%;
+    }
+
+    h2{
+        margin-bottom: 20px;
+    }
+}

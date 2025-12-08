@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kedebideri:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background1-text-color-1--: #ffff;
+    --text-color2-: #707351;
+    --list-background--: #ffe8c6;
+}
+
+header{
+    background-color: var(--background1-textncolor1-);
+    padding-top: 60px;
+    padding-bottom: 80px;
+    font-family: "Kedebideri", sans-serif;
+    margin: 20px;
+}
+
+header h1{
+    margin-left: 20px;
+    font-size: 150px;
+    font-weight: 450;
+    color: var(--text-color2-);
+}
+
+header p{
+    font-family: "Poppins";
+    font-size: 14px;
+}
+
+
+header img{
+    height: auto;
+    max-width: 100%;
+}
+
+#image-decor{
+    place-self: end;
+    width: 110%;
+}
+
+
+.grid-container-gf
+{
+    display: grid;
+    margin: 20px;
+    align-items: start;
+    gap: 3em;
+    grid-template-areas:
+    "text image-decor"
+    "list image-decor"
+    "list image"
+    "list image";
+}
+
+.greenFocusList{
+    width: auto;
+    min-height: 700px;
+    padding: 2em;
+    border-radius: 18px;
+    background-color: var(--list-background--);
+}
+
+@media (max-width: 768px) {
+
+    header h1{
+        font-size: 85px;
+        line-height: 0.9;
+    }
+
+    .grid-container-gf
+    {
+        grid-template-areas:
+        "text text"
+        "list image-decor"
+        "list image"
+        "list image";
+    }
+
+    #image-decor{
+    place-self: start;
+    width: 110%;
+    }
+
+    header p{
+    text-align: center;
+    }
+
+    #villagepic img{
+        height: 300px;
+    }
+    
+
+
+}
+
+@media (max-width: 425px) {
+    body{
+        background-image: url(../images/image-decor-gf.png);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: right top
+        
+    }
+
+    header {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 90px;
+        text-align: center;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 12px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .grid-container-gf {
+        justify-self: start;
+        grid-template-areas:
+        "text"
+        "list"
+        "image";
+        gap: 1em;
+    }
+    
+    #image-decor {
+        display: none;
+    }
+
+    /* Keep the decor image visible without breaking layout */
+
+    .gf-box {
+        margin: 5px;
+    }
+
+}
