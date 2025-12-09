@@ -117,8 +117,8 @@ section{
     justify-items: center;
     grid-template-areas:
     "title"
-    "text-box"
-    "image";
+    "image"
+    "text-box";
 }
     header{
         padding-bottom: 60px;

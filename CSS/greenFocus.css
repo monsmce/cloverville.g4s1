@@ -23,7 +23,7 @@ header h1{
 
 header p{
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -107,7 +107,7 @@ header img{
     }
 
     header h1 {
-        font-size: 90px;
+        font-size: 100px;
         text-align: center;
         margin: 0px;
         margin-bottom: 5px;

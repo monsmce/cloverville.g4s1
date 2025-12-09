@@ -3,6 +3,7 @@
 
 :root {
     --navbar-base--: rgba(0, 0, 0, 0.4);
+    --navbar-base-responsive--: rgba(0, 0, 0, 0.9);
     --navbar-center-text: #ffe8c6;
     --navbar-right-text: #ffff;
     --footer-text: black;
@@ -138,6 +139,7 @@ footer a:hover{
     /* When activated */
     .topnav.responsive {
         display: block;
+        background-color: var(--navbar-base-responsive--);
     }
 
     /* Stack items vertically */
