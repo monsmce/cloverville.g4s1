@@ -268,7 +268,7 @@ h1{
         grid-template-areas:
         "box1"
         "box2";
-        margin: 20px;
+        margin: 2px;
         gap: 1.5em;
     }
 
@@ -345,10 +345,6 @@ h1{
         font-size: 13px;
     }
     
-
-    .grid-container-base{
-        margin: 0;
-    }
 
 }
 
